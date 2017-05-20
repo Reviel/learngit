@@ -1,0 +1,35 @@
+安装git
+首先，你可以试着输入git，看看系统有没有安装Git
+如果没有安装git的话有些新版本的系统会提示你安装git的代码，照做就好了
+如果没有提示代码那么
+如果你碰巧用Debian或Ubuntu Linux，通过一条sudo apt-get install git就可以直接完成Git的安装，非常简单。
+老一点的Debian或Ubuntu Linux，要把命令改为sudo apt-get install git-core
+
+
+
+安装完成后，还需要最后一步设置，在命令行输入：
+
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+
+
+创建版本库
+首先，进入一个根目录
+第二步，通过git init命令把这个目录变成Git可以管理的仓库
+
+将文件添加到git
+将文件添加到暂存区 git add：
+$ git add readme.txt
+要添加多个文件的时候文件和文件之间用空格隔开
+$ git add file2.txt file3.txt
+
+将暂存区文件添加到分支 git commit：
+$ git commit -m "这个位置写你的提交注释"
+
+查看git工作区、暂存区的状态
+git status
+
+查看git中工作区和暂存区
+
+
