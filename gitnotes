@@ -30,6 +30,35 @@ $ git commit -m "这个位置写你的提交注释"
 查看git工作区、暂存区的状态
 git status
 
-查看git中工作区和暂存区的文件的不同之处
+查看git中工作区中的文件和最近一次git add或者git commit之间的区别
+git diff
 
+查看git 中的版本信息
+$ git log
+或者
+$ git log --pretty=oneline
 
+回退到上一个版本
+$ git reset --hard HEAD^
+或者
+$ git reset --hard HEAD~1
+上上个版本
+$ git reset --hard HEAD^^
+或者
+$ git reset --hard HEAD~2
+
+在终端中查看文本的信息
+$ cat readme.txt
+
+回退到某一个版本
+$ git reset --hard 3628164
+
+记录你每一次的git 命令和相关的版本号：
+$ git reflog
+
+丢弃工作区的修改(让这个文件回到最近一次git commit或git add时的状态)：
+$ git checkout -- readme.txt
+
+把暂存区的修改撤销掉（unstage），重新放回工作区：
+$ git reset HEAD readme.txt
+当我们用HEAD时，表示最新的版本
