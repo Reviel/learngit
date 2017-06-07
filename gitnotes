@@ -127,4 +127,12 @@ $ git checkout dev
 用git branch命令查看当前分支：
 $ git branch
 
+在切换到不同的分支的时候文件夹里的文件也会有不同
 
+把dev分支的工作成果合并到master分支上：（还有其他合并方式）(Fast-forward代表的是快进模式)
+$ git merge dev
+
+删除dev分支
+$ git branch -d dev
+
+Git鼓励大量使用分支
