@@ -115,3 +115,16 @@ Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
 
 分支管理的概念
 你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。
+
+创建分支和管理分支
+创建dev分支，然后切换到dev分支：
+$ git checkout -b dev
+
+git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+$ git branch dev
+$ git checkout dev
+
+用git branch命令查看当前分支：
+$ git branch
+
+
