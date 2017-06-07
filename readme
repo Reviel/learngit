@@ -2,3 +2,5 @@ Git is a version control system.
 Git is free software.
 学习git,但愿能更好的处理一切吧
 有个困惑就是不同的git之间的使用方式是不是也不一样啊，并且可视化工具那个比较好呢
+
+再最后加上一行代码来进行冲突测试，本行代码来自featurel
