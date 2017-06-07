@@ -136,3 +136,10 @@ $ git merge dev
 $ git branch -d dev
 
 Git鼓励大量使用分支
+
+创建不同分支后有不同的修改和提交之后合并的时候会提示不同的分支之间有冲突，此时需要自己打开文件来查看并修改文件，然后再进行提交，注意此时不用再合并分支了，而是直接add然后commit就好。
+
+用带参数的git log也可以看到分支的合并情况
+$ git log --graph --pretty=oneline --abbrev-commit
+$ git log --graph
+
