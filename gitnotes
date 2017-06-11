@@ -155,3 +155,17 @@ $ git merge --no-ff -m "merge with no-ff" dev
 bug分支
 当前的工作没有完成，所以无法提交，但是此时需要去修复一个bug，手头的工作要暂停，此时可以使用stash功能，将当前的工作区“现场保护”或“入栈”
 
+保存现场(在使用下面这条指令的时候会把当前的分支保存，注意！！同时会把当前的分支给返回到上一次该分支提交的状态！！！)
+$ git stash
+查看stash列表
+$ git stash list
+恢复现场
+$ git stash apply
+或者
+$ git stash apply stash@{0}
+删除现场
+$ git stash drop
+或者
+$ git stash drop stash@{0}
+恢复并删除上一次的现场
+$ git stash pop
