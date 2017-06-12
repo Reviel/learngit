@@ -143,3 +143,46 @@ Git鼓励大量使用分支
 $ git log --graph --pretty=oneline --abbrev-commit
 $ git log --graph
 
+禁用Fast forward模式的合并
+$ git merge --no-ff -m "merge with no-ff" dev
+
+分支管理策略
+首先，master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；
+干活都在dev分支上，也就是说，dev分支是不稳定的，到某个时候，比如1.0版本发布时，再把dev分支合并到master上，在master分支发布1.0版本；
+你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了。
+首先，master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；
+
+bug分支
+当前的工作没有完成，所以无法提交，但是此时需要去修复一个bug，手头的工作要暂停，此时可以使用stash功能，将当前的工作区“现场保护”或“入栈”
+
+保存现场(在使用下面这条指令的时候会把当前的分支保存，注意！！同时会把当前的分支给返回到上一次该分支提交的状态！！！)
+$ git stash
+查看stash列表
+$ git stash list
+恢复现场
+$ git stash apply
+或者
+$ git stash apply stash@{0}
+删除现场
+$ git stash drop
+或者
+$ git stash drop stash@{0}
+恢复并删除上一次的现场
+$ git stash pop
+
+开发一个新feature，最好新建一个分支
+如果要丢弃一个没有被合并过的分支，可以通过
+强行删除某个分支git branch -D dev
+普通删除某个分支git branch -d dev
+
+查看远程库的信息
+$ git remote
+显示更详细的信息：
+$ git remote -v
+master分支是主分支，因此要时刻与远程同步
+dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
+多人协作时，大家都会往master和dev分支上推送各自的修改。
+当你的小伙伴从远程库clone时，默认情况下，你的小伙伴只能看到master分支。
+
+克隆其他分支到本地
+$ git checkout -b dev origin/dev
