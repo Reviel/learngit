@@ -174,3 +174,15 @@ $ git stash pop
 如果要丢弃一个没有被合并过的分支，可以通过
 强行删除某个分支git branch -D dev
 普通删除某个分支git branch -d dev
+
+查看远程库的信息
+$ git remote
+显示更详细的信息：
+$ git remote -v
+master分支是主分支，因此要时刻与远程同步
+dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
+多人协作时，大家都会往master和dev分支上推送各自的修改。
+当你的小伙伴从远程库clone时，默认情况下，你的小伙伴只能看到master分支。
+
+克隆其他分支到本地
+$ git checkout -b dev origin/dev
