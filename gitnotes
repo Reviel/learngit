@@ -1,9 +1,13 @@
 安装git
-首先，你可以试着输入git，看看系统有没有安装Git
-如果没有安装git的话有些新版本的系统会提示你安装git的代码，照做就好了
-如果没有提示代码那么
-如果你碰巧用Debian或Ubuntu Linux，通过一条sudo apt-get install git就可以直接完成Git的安装，非常简单。
-老一点的Debian或Ubuntu Linux，要把命令改为sudo apt-get install git-core
+首先看看系统有没有安装Git
+$ git --version
+
+如果没有git的话，有些新版本的系统会提示你安装git的代码，照做就好了
+如果没有提示代码，那么：
+如果你用Debian或Ubuntu Linux，通过以下命令就可以直接完成Git的安装。
+$ sudo apt-get install git
+老一点的Debian或Ubuntu Linux，要把命令改为如下
+$ sudo apt-get install git-core
 
 
 
@@ -257,3 +261,5 @@ $ git config --global alias.unstage 'reset HEAD'
 .git/config
 别名就在[alias]后面，要删除别名，直接把对应的行删掉即可。
 而当前用户的Git配置文件放在用户主目录下的一个隐藏文件.gitconfig中：
+
+搭建自己的git服务器
